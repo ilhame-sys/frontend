@@ -1,0 +1,90 @@
+///
+
+#text{
+    overflow: hidden; 
+    word-wrap: break-word; 
+    font-size: 1.3vw;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: justify;
+    @media screen and (max-width: 900px){ 
+        font-size: 2.6vw;
+    }
+    @media screen and (max-width: 700px){ 
+        font-size: 3.6vw;
+    }
+}
+
+#column:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+#div-action-img{
+    float: left; 
+    width: 206px;
+    height: 200px;
+    padding: 10px;
+    padding-bottom: 19px;
+    padding-top: 19px;
+    @media screen and (max-width: 900px){ 
+        width: unset;
+        height: unset;
+        float: none;
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+}
+
+#action-img{
+    width: 187px;
+    height: 162px;
+    box-shadow: 1px 1px 8px #555;
+    margin-left: 10px;
+    margin-right: 10px;
+    @media screen and (max-width: 900px){ 
+        text-align: center;
+     }
+}
+
+#action-img:hover{
+    box-shadow: 1px 1px 16px #555;
+}
+
+#action-img-position{
+    @media screen and (max-width: 900px){ 
+       text-align: center; 
+    }
+}
+
+#action-div-text{
+    height: 200px;
+    text-align: justify;
+    @media screen and (max-width: 900px){ 
+        height: unset;
+        width: 100%;
+    }
+}
+
+#action-button{
+    text-align: center;
+    padding: 10px;
+}
+
+#action-separator{
+    display: none;
+    @media screen and (max-width: 900px){ 
+        display: block;
+    }
+}
+
+#action-date{
+    text-align: end;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+#title{
+    text-align: center;
+    margin: 0px;
+}
+///
