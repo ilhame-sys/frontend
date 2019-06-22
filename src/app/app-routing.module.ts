@@ -10,7 +10,7 @@ import { MembershipComponent } from './component/membership/membership.component
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     pathMatch: 'full',
     component: HomeComponent
   },
