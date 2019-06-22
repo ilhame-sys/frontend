@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from 'src/app/model/article.model';
+import { Observable } from 'rxjs';
+import { ArticleService } from 'src/app/service/article.service';
 
 @Component({
   selector: 'app-article',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  constructor() { }
+  articles: Article[];
+  error = '';
+  success = '';
 
-  ngOnInit() {
+  constructor(private articleService: ArticleService) { }
+
+  ngOnInit() { 
+    this.getAll();
+  }
+
+
+  getAll(){
+    this.articleService.readAllArticle().subscribe((articles: Article[])=>{
+      this.articles = articles;
+      console.log(this.articles);
+    })
   }
 
 }

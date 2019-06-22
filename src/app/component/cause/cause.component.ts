@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cause } from 'src/app/model/cause.model';
+import { CauseService } from 'src/app/service/cause.service';
 
 @Component({
   selector: 'app-cause',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CauseComponent implements OnInit {
 
-  constructor() { }
+  cause: Cause[];
+  error = '';
+  success = '';
 
-  ngOnInit() {
+  constructor(private causeService :CauseService) { }
+
+  ngOnInit() { 
+    this.getAll();
   }
 
+
+  getAll(){
+    this.causeService.readAllCause().subscribe((causes: Cause[])=>{
+      this.cause = causes;
+      console.log(this.cause);
+    })
+  }
 }
