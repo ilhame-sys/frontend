@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/style.css",
               "src/styles.scss",
               "node_modules/bulma/css/bulma.min.css"
             ],
