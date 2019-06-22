@@ -1,3 +1,55 @@
 <div class="titre">
   <b>Adhésion</b>
 </div>
+
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <div class="container">
+        <form (ngSubmit)="processForm()">
+          <!-- name -->
+          <div class="field">
+            <input
+              type="text"
+              name="name"
+              class="input"
+              placeholder="Votre nom"
+              [(ngModel)]="name"
+            />
+          </div>
+
+          <!-- firstName -->
+          <div class="field">
+            <input
+              type="text"
+              name="firtName"
+              class="input"
+              placeholder="Votre prénom"
+              [(ngModel)]="firstName"
+            />
+          </div>
+
+          <!-- email -->
+          <div class="field">
+            <input
+              type="email"
+              name="email"
+              class="input"
+              placeholder="Votre email"
+              [(ngModel)]="email"
+            />
+          </div>
+
+          <input type="submit" class="button is-info" value="Adhérer" />
+        </form>
+      </div>
+    </div>
+    <div class="column">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        commodi nam quaerat? Qui quod cum quo fuga officiis reprehenderit esse,
+        ex, alias tempora error neque dolor impedit ullam aut est!
+      </p>
+    </div>
+  </div>
+</section>
