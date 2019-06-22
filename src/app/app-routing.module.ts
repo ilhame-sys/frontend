@@ -5,6 +5,7 @@ import { OrganizationComponent } from './component/organization/organization.com
 import { CauseComponent } from './component/cause/cause.component';
 import { ArticleComponent } from './component/article/article.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { DonationComponent } from './component/donation/donation.component';
 import { MembershipComponent } from './component/membership/membership.component';
 
 const routes: Routes = [
@@ -30,9 +31,14 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
+    path: 'donation',
+    component: DonationComponent,
+  },
+  {
     path: 'membership',
     component: MembershipComponent,
-  }
+  },
+
 ];
 
 @NgModule({

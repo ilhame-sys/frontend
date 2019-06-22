@@ -43,11 +43,19 @@
         Actualités
       </a>
 
-      <a class="navbar-item" routerLink="/contact">
-        Contact
-      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" routerLink="/contact">
+          Contact
+        </a>
 
-      <a class="navbar-item" routerLink="donate">
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/membership">
+            Adhésion
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" routerLink="/donation">
         Don
       </a>
     </div>
