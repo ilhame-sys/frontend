@@ -19,6 +19,9 @@ import { CauseComponent } from './component/cause/cause.component';
 import { CauseSingleComponent } from './component/cause/cause-single/cause-single.component';
 import { ArticleService } from './service/article.service';
 import { CauseService } from './service/cause.service';
+import { TeamComponent } from './component/organization/team/team.component';
+import { MissionComponent } from './component/organization/mission/mission.component';
+import { AssoComponent } from './component/organization/asso/asso.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { CauseService } from './service/cause.service';
     ArticleComponent,
     ArticleSingleComponent,
     CauseComponent,
-    CauseSingleComponent
+    CauseSingleComponent,
+    TeamComponent,
+    MissionComponent,
+    AssoComponent
   ],
   imports: [
     BrowserModule,
