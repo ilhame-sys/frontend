@@ -1,90 +1,91 @@
 ///
 
-#text{
-    overflow: hidden; 
-    word-wrap: break-word; 
-    font-size: 1.3vw;
-    padding-right: 15px;
-    padding-left: 15px;
-    text-align: justify;
-    @media screen and (max-width: 900px){ 
-        font-size: 2.6vw;
+#cause{
+
+    position: relative;
+    display: inline-block;
+
+    a,p,div{
+        margin: 0;
+        padding: 0;
     }
-    @media screen and (max-width: 700px){ 
-        font-size: 3.6vw;
-    }
-}
 
-#column:hover{
-    background-color: rgb(241, 241, 241);
-}
-
-#div-action-img{
-    float: left; 
-    width: 206px;
-    height: 200px;
-    padding: 10px;
-    padding-bottom: 19px;
-    padding-top: 19px;
-    @media screen and (max-width: 900px){ 
-        width: unset;
-        height: unset;
-        float: none;
-        padding-bottom: 20px;
-        padding-top: 0px;
-    }
-}
-
-#action-img{
-    width: 187px;
-    height: 162px;
-    box-shadow: 1px 1px 8px #555;
-    margin-left: 10px;
-    margin-right: 10px;
-    @media screen and (max-width: 900px){ 
-        text-align: center;
-     }
-}
-
-#action-img:hover{
-    box-shadow: 1px 1px 16px #555;
-}
-
-#action-img-position{
-    @media screen and (max-width: 900px){ 
-       text-align: center; 
-    }
-}
-
-#action-div-text{
-    height: 200px;
-    text-align: justify;
-    @media screen and (max-width: 900px){ 
-        height: unset;
+    @media screen and (max-width: 1150px){ 
         width: 100%;
+        float: none;
     }
-}
 
-#action-button{
-    text-align: center;
-    padding: 10px;
-}
+    #cause-div-img{
 
-#action-separator{
-    display: none;
-    @media screen and (max-width: 900px){ 
-        display: block;
+        float: left;
+        position: relative;
+        width: 260px;
+        height: 230px;
+        padding: 10px;
+
+        @media screen and (max-width: 700px){ 
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+
+        a{
+            img{
+                width: 100%;
+                height: 100%;
+                box-shadow: 1px 1px 8px #555;
+
+                &:hover{
+                    box-shadow: 1px 1px 16px #555;
+                }
+
+                @media screen and (max-width: 900px){ 
+                    width: 230px;
+                    height: 200px;
+                    text-align: center;
+                    align-content: center;
+                }
+            }
+        }
+
     }
-}
+    
+    #cause-div-description{
 
-#action-date{
-    text-align: end;
-    font-size: 20px;
-    padding-right: 20px;
-}
+        display: inline-block;
+        width: calc(100% - 260px - 12px);
+        margin-left: 10px;
 
-#title{
-    text-align: center;
-    margin: 0px;
+        @media screen and (max-width: 700px){ 
+            width: 100%;
+        }
+
+        .cause-title{
+            text-align: center;
+        }
+
+        .cause-description{
+            min-height: 150px;
+            max-height: 150px;
+            text-align: justify;
+            overflow-y: hidden;
+            @media screen and (max-width: 700px){ 
+                height: fit-content;
+            }
+        }
+
+        .cause-status{
+            height: 20px;
+        }
+
+    }
+
+    #cause-button{
+        padding-top: 10px;
+        text-align: center;
+        a{
+            padding: 10px;
+        }
+    }
+
 }
-///
