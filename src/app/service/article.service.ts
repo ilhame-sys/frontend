@@ -18,6 +18,11 @@ export class ArticleService {
     .pipe(catchError(this.handleError));
   }
 
+  readArticle($id:string): Observable<Article[]>{
+    return this.httpClient.get<Article[]>(`${this.PHP_API_SERVER}/api/article/article.php?id=` + $id)
+    .pipe(catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse) {
     console.log(error);
 

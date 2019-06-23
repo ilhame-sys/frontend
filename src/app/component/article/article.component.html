@@ -1,3 +1,20 @@
-<p>
-    article work !
-</p>
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="success">{{ success }}</div>
+
+<div *ngFor="let article of articles">
+  <div class="tile">
+    <p>
+      <strong> {{ article.title }} </strong>
+    </p>
+    <div>
+      <p>{{ article.description }}</p>
+      <p>
+        <small>{{ article.author }}</small>
+      </p>
+      <p>
+        <small>{{ article.date }}</small>
+      </p>
+    </div>
+    <a routerLink="/article/show/{{article.id}}">Click</a>
+  </div>
+</div>

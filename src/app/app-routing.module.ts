@@ -7,6 +7,7 @@ import { ArticleComponent } from './component/article/article.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { DonationComponent } from './component/donation/donation.component';
 import { MembershipComponent } from './component/membership/membership.component';
+import { ArticleSingleComponent } from './component/article/article-single/article-single.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'article',
     component: ArticleComponent,
+  },
+  {
+    path: 'article/show/:id',
+    component: ArticleSingleComponent,
   },
   {
     path: 'contact',
