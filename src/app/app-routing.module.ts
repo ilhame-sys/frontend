@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'cause',
     component: CauseComponent,
   },
+  // {
+  //   path: 'cause/show/:id',
+  //   component: CauseSingleComponent,
+  // },
   {
     path: 'article',
     component: ArticleComponent,

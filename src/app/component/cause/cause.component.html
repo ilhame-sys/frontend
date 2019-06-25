@@ -4,7 +4,28 @@
 <hr>
 
 <section class="contenu">
-    <app-cause-single></app-cause-single>
+  <div class="column is-half" id="cause" *ngFor="let article of articles">
+    <div id="cause-div-img">
+      <a target="_blank" href="assets/img/causeImg/{{cause.image}}">
+        <img src="assets/img/causeImg/{{cause.image}}" alt="Image non charger" id="action-img">
+      </a>  
+    </div>
+    <div id="cause-div-description">
+      <p class="title" id="title">{{cause.title}}</p>
+        <div class="cause-description">
+          {{cause.description}}
+        </div>
+        <div class="cause-status">
+          {{cause.status}}
+        </div>
+      <p is="action-date">{{cause.dateCreation}}</p>
+    </div>
+    <div>
+      <p id="cause-button">
+        <a routerLink="/cause/show/{{cause.id}}" class="button is-success is-rounded" style="font-size: 20px;"> Détails </a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <hr>

@@ -18,7 +18,11 @@ export class CauseService {
       .get<Cause[]>(`${this.PHP_API_SERVER}/api/cause/cause.php`)
       .pipe(catchError(this.handleError));
   }
-
+  readCause($id:string): Observable<Cause[]>{
+    return this.httpClient
+    .get<Cause[]>(`${this.PHP_API_SERVER}/api/cause/cause.php?id=` + $id)
+    .pipe(catchError(this.handleError));
+  }
   private handleError(error: HttpErrorResponse) {
     console.log(error);
 
@@ -26,3 +30,4 @@ export class CauseService {
     return throwError("Error! something went wrong.");
   }
 }
+
