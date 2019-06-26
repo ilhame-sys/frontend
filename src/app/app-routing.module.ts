@@ -8,7 +8,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { DonationComponent } from './component/donation/donation.component';
 import { MembershipComponent } from './component/membership/membership.component';
 import { ArticleSingleComponent } from './component/article/article-single/article-single.component';
-
+import { CauseSingleComponent } from './component/cause/cause-single/cause-single.component';
 const routes: Routes = [
   {
     path: '',
@@ -23,10 +23,10 @@ const routes: Routes = [
     path: 'cause',
     component: CauseComponent,
   },
-  // {
-  //   path: 'cause/show/:id',
-  //   component: CauseSingleComponent,
-  // },
+  {
+    path: 'cause/show/:id',
+    component: CauseSingleComponent,
+  },
   {
     path: 'article',
     component: ArticleComponent,

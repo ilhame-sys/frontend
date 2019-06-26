@@ -9,7 +9,7 @@ import { CauseService } from 'src/app/service/cause.service';
 })
 export class CauseComponent implements OnInit {
 
-  cause: Cause[];
+  causes: Cause[];
   error = '';
   success = '';
 
@@ -22,8 +22,8 @@ export class CauseComponent implements OnInit {
 
   getAll(){
     this.causeService.readAllCause().subscribe((causes: Cause[])=>{
-      this.cause = causes;
-      console.log(this.cause);
+      this.causes = causes;
+      console.log(this.causes);
     })
   }
 }
